@@ -2,3 +2,6 @@
 **/*.ejs
 **/*.html
 package.json
+node_modules
+coverage
+dist
