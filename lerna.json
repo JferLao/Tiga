@@ -1,0 +1,24 @@
+{
+  "command": {
+    "publish": {
+      "message": "chore(release): publish %s"
+    },
+    "bootstrap": {
+      "ignore": "component-*",
+      "npmClientArgs": ["--no-package-lock"],
+      "hoist": true
+    },
+    "version": {
+      "allowBranch": [
+        "master",
+        "release",
+        "develop",
+        "feature"
+      ]
+    }
+  },
+  "packages": [ "packages/tiga-ui"],
+  "version": "0.0.1",
+  "npmClient": "yarn",
+  "useWorkspaces": true
+}
