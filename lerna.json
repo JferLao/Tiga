@@ -1,0 +1,27 @@
+{
+  "command": {
+    "publish": {
+      "allowBranch": "master",
+      "conventionalCommits": true,
+      "exact": true,
+      "ignoreChanges": ["ignored-file", "*.md"],
+      "message": "chore(release): publish"
+    },
+    "bootstrap": {
+      "ignore": "component-*",
+      "npmClientArgs": ["--no-package-lock"],
+      "hoist": true
+    },
+    "version": {
+      "allowBranch": [
+        "master",
+        "release",
+        "develop",
+        "feature"
+      ]
+    }
+  },
+  "packages": ["packages/*"],
+  "version": "0.0.1",
+  "useWorkspaces": true
+}
