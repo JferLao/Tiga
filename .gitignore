@@ -5,6 +5,7 @@ node_modules/
 # Yarn and NPM files
 yarn-error.log
 package-lock.json
+.npmrc
 
 # Template files
 .temp
