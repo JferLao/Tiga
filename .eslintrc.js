@@ -6,13 +6,15 @@ module.exports = {
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
+    'plugin:jest/recommended',
     'prettier',
   ],
-  plugins: ['@typescript-eslint', 'prettier'],
+  plugins: ['@typescript-eslint', 'prettier','jest'],
   env: {
     browser: true,
     es6: true,
     jest: true,
+    node: true
   },
   settings: {
     react: {
@@ -24,6 +26,8 @@ module.exports = {
   }
   },
   globals: {
+    test: true,
+    expect: true,
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
