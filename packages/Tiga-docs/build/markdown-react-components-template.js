@@ -4,7 +4,7 @@ module.exports = template = ({ imports, js, jsx, state, method, options }) => {
 
   ${js}
 
-  class MarkdownItReactComponent extends Nerv.Component {
+  class MarkdownItReactComponent extends React.Component {
       constructor(props){
           super(props);
           this.state = ${state || '{}'};
@@ -20,7 +20,6 @@ module.exports = template = ({ imports, js, jsx, state, method, options }) => {
       }
       ${method || ''}
       render(){
-
           return (
               <div className="${options.className}">
                   ${jsx}

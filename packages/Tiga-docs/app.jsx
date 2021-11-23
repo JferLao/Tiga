@@ -1,10 +1,14 @@
-import * as Nerv from 'nervjs'
+import ReactDOM from 'react-dom'
 import { HashRouter as Router, Switch, Route } from 'react-router-dom'
+import React from 'react'
+import '@tailwindcss/postcss7-compat/tailwind.css'
+
 
 import Docs from './pages/docs.jsx'
 import './assets/style/normalize.scss'
 import './assets/style/index.scss'
-class App extends Nerv.Component {
+
+class App extends React.Component {
   constructor(...args) {
     super(...args)
   }
@@ -13,14 +17,14 @@ class App extends Nerv.Component {
     return (
       <div className='wrapper'>
         <Switch>
-          <Route path='/' component={Docs} />
+          <Route path='/docs' component={Docs} />
         </Switch>
       </div>
     )
   }
 }
 
-Nerv.render(
+ReactDOM.render(
   <Router>
     <App />
   </Router>,

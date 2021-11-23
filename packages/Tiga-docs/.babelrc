@@ -6,22 +6,24 @@
         "spec": true,
         "modules": false,
         "targets": {
-          "browsers": ["ie >= 9", "Chrome >= 21", "Firefox >= 1", "Edge >= 13", "last 3 versions"]
+          "browsers": [
+            "ie >= 9",
+            "Chrome >= 21",
+            "Firefox >= 1",
+            "Edge >= 13",
+            "last 3 versions"
+          ]
         },
         "loose": false,
-        "forceAllTransforms" : true,
-        "useBuiltIns": "entry"
+        "forceAllTransforms": true,
+        "useBuiltIns": "entry",
+        "corejs": "3.6"
       }
     ]
   ],
   "plugins": [
-    "syntax-dynamic-import",
+    "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-proposal-class-properties",
-    [
-      "@babel/plugin-transform-react-jsx",
-      {
-        "pragma": "Nerv.createElement"
-      }
-    ]
+    ["@babel/plugin-transform-react-jsx"]
   ]
 }

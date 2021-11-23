@@ -74,13 +74,9 @@ module.exports = source => {
   )
 
   // md转换
-  const {
-    body,
-    attributes: { imports: importMap }
-  } = frontMatter(source)
+  const { body } = frontMatter(source)
 
-  // taro组件库需要nervjs去做多端统一的编译内容
-  const imports = `import * as Nerv from 'nervjs';  import copy from 'copy-to-clipboard';${importMap}`
+  const imports = `import React from 'react';  import copy from 'copy-to-clipboard';`
 
   const moduleJS = []
   const state = ''
@@ -101,6 +97,7 @@ module.exports = source => {
 
       // 1 means the tag is opening
       if (tokens[idx].nesting === 1) {
+        flag = idx
         let codeText = ''
         let i = 1
         let nextToken = tokens[idx + i]
@@ -119,14 +116,16 @@ module.exports = source => {
   })
 
   // md 处理过后的字符串含有 class 和 style ，需要再次处理给到react
+  // fix: style需要处理
   const content = md
     .render(body)
     .replace(/<hr>/g, '<hr />')
     .replace(/<br>/g, '<br />')
     .replace(/class=/g, 'className=')
+    .replace(/style=/g,'styles=')
 
   const js = moduleJS.join('\n')
   const jsx = content
-
+  
   return template({ imports, js, jsx, state, options })
 }

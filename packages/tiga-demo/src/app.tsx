@@ -1,17 +1,23 @@
-import PropTypes, { InferProps } from 'prop-types'
+import Taro from '@tarojs/taro'
+import Index from './pages/index/index'
 import React from 'react'
 
+import './app.scss'
 
 class App extends React.Component {
-  public static propTypes: InferProps<{}>
+  config: Taro.Config = {
+    pages: ['pages/basic/button/index'],
+    window: {
+      backgroundTextStyle: 'light',
+      navigationBarBackgroundColor: '#fff',
+      navigationBarTitleText: 'WeChat',
+      navigationBarTextStyle: 'black'
+    }
+  }
 
-  public render(): React.ReactNode {
-    return this.props.children
+  render() {
+    return <Index />
   }
 }
 
-App.propTypes = {
-  children: PropTypes.node
-}
-
-export default App
+Taro.render(<App />, document.getElementById('app'))
