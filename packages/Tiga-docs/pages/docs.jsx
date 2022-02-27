@@ -1,7 +1,7 @@
 import * as Nerv from 'nervjs'
 import { Route, Redirect, Switch, browserHistory } from 'react-router-dom'
 
-import navsConfig from '../nav.config.json'
+import navsConfig from '../nav.config.yml'
 import { default as pathMap } from '../page-route'
 import '../assets/style/docs.scss'
 

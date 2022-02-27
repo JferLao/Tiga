@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "@babel/plugin-syntax-jsx": "^7.16.0",
+    "@tailwindcss/postcss7-compat": "2.2.17",
     "@tarojs/plugin-platform-alipay": "^3.3.14",
     "@tarojs/plugin-platform-jd": "^3.3.14",
     "@tarojs/plugin-platform-qq": "^3.3.14",
@@ -51,7 +52,7 @@
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
     "regenerator-runtime": "^0.13.5",
-    "@tailwindcss/postcss7-compat":"2.2.17",
+    "rimraf": "^3.0.2",
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
