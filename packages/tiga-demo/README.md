@@ -1,11 +1,11 @@
-# `Tiga-ui`
+# `tiga-demo`
 
 > TODO: description
 
 ## Usage
 
 ```
-const tigaUi = require('Tiga-ui');
+const tigaDemo = require('tiga-demo');
 
 // TODO: DEMONSTRATE API
 ```

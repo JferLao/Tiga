@@ -1,7 +1,7 @@
 {
   "overrides": [
     {
-      "include": "packages/tiga-ui-docs/**",
+      "include": "packages/tiga-docs/**",
       "presets": [
         [
           "@babel/preset-env",
@@ -23,7 +23,14 @@
             "corejs": "3.6"
           }
         ],
-        "@babel/preset-react"
+        "@babel/preset-react",
+        [
+          "taro",
+          {
+            "framework": "react",
+            "ts": false
+          }
+        ]
       ],
       "plugins": [
         "@babel/plugin-syntax-dynamic-import",

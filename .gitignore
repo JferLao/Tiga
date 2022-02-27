@@ -4,7 +4,10 @@ node_modules/
 
 # Yarn and NPM files
 yarn-error.log
+lerna-debug.log
 package-lock.json
+yarn.lock
+.npmrc
 
 # Template files
 .temp

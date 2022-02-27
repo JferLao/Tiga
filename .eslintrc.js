@@ -3,23 +3,37 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    'plugin:jest/recommended',
     'prettier',
   ],
-  plugins: ['@typescript-eslint', 'prettier'],
+  plugins: ['@typescript-eslint', 'prettier','jest'],
   env: {
     browser: true,
     es6: true,
     jest: true,
+    node: true
   },
   settings: {
     react: {
       pragma: 'React',
       version: 'detect',
     },
+    'import/resolver': {
+      'eslint-import-resolver-typescript': true,
+  }
   },
   globals: {
+    test: true,
+    expect: true,
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
+  },
+  babelOptions: {
+    configFile: "./babel.config.json",
+    rootMode: "upward"
   },
   ignorePatterns: ['.eslintrc.js'],
   parser: '@typescript-eslint/parser',
@@ -39,6 +53,15 @@ module.exports = {
       {
         consistent: true,
       },
+    ],
+   'no-console': [
+      error,
+      {
+        "allow": [
+          "warn",
+          "error"
+        ]
+      }
     ],
     'no-plusplus': 0,
     'no-underscore-dangle': 0,
