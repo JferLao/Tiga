@@ -28,7 +28,8 @@
     "build": "yarn run build:static & yarn run build:doc",
     "build:doc": "node ./build/build-docs.js",
     "build:static": "node ./build/build-static.js",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "test": "node ./test/index.js"
   },
   "bugs": {
     "url": "https://github.com/JferLao/Tiga/issues"
@@ -46,7 +47,9 @@
     "classnames": "^2.2.6",
     "copy-to-clipboard": "^3.3.1",
     "core-js": "3",
+    "glob-all": "^3.2.1",
     "highlight.js": "^9.18.1",
+    "mocha": "^6.1.4",
     "qrcode.react": "^1.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
