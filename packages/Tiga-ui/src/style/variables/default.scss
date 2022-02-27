@@ -1,0 +1,45 @@
+$color-theme-1: #019be0 !default;
+$color-theme-2: #03b8cc !default;
+$color-theme-3: #09c96b !default;
+
+/* Color */
+$color-success: #01bf9a !default;
+$color-error: #ff4821 !default;
+$color-warning: #ff9200 !default;
+$color-info: #1dc1cb !default;
+
+/* Text-Color */
+$color-text-base: #27282a !default;
+$color-text-minor: #515358 !default;
+$color-text-secondary: #8f9298 !default;
+$color-text-info: #c0c2c5 !default;
+
+$color-text-white-1: lighten(#fff, 10%) !default;
+$color-text-white-2: lighten(#fff, 20%) !default;
+$color-text-white-3: lighten(#fff, 40%) !default;
+$color-text-white-4: lighten(#fff, 60%) !default;
+
+/* Background-color */
+$background-color-base: #f0f2fb !default;
+$background-color-text: #ffffff !default;
+
+/* Split-color */
+$split-color-base: #e6e6e6 !default;
+$split-color-second: #c4c4c4 !default;
+
+/* Button-color */
+$button-color-base: $color-theme-1 !default;
+$button-text-color: $color-text-white-1 !default;
+$button-color-click: lighten($color-theme-1, 15%) !default;
+$button-text-color-click: lighten($color-text-white-1, 15%) !default;
+$button-color-disabled: lighten($color-theme-1, 30%) !default;
+$button-text-color-disabled: $color-text-white-4 !default;
+
+
+
+
+/*  Components   */
+
+/* Loading */
+$ti-loading-size: 36px !default;
+$ti-loading-color: $color-theme-1 !default;
