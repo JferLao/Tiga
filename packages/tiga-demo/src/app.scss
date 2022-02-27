@@ -29,18 +29,18 @@ view {
   }
 
   &__header {
-    margin-bottom: 20px;
     padding-bottom: 10px;
+    margin-bottom: 20px;
     border-bottom: 1px solid #e5e5e5;
 
     &-title {
-      color: #999;
       font-size: 28px;
+      color: #999;
     }
 
     &-note {
-      font-size: 24px;
       margin-left: 20px;
+      font-size: 24px;
       color: #ccc;
     }
   }
@@ -64,44 +64,44 @@ view {
 
     &__desc {
       margin-bottom: 12px;
-      color: #333;
       font-size: 24px;
+      color: #333;
     }
   }
 }
 
 .page-body {
   min-height: calc(100vh - 180px);
-  background: #fff;
-  box-shadow: 0 26px 163px 0 rgb(0 0 0 / 11%);
   padding-bottom: 60px;
   padding-bottom: calc(constant(safe-area-inset-bottom) + 60px);
   padding-bottom: calc(env(safe-area-inset-bottom) + 60px);
+  background: #fff;
+  box-shadow: 0 26px 163px 0 rgb(0 0 0 / 11%);
 
   .panel {
     margin: 32px 0 56px;
 
     &__title {
       position: relative;
-      margin-bottom: 50px;
       padding-left: 50px;
-      color: #6a6a77;
+      margin-bottom: 50px;
       font-size: 32px;
       font-weight: bold;
       line-height: 1.5;
+      color: #6a6a77;
 
       &::before {
-        content: '';
-        display: inline-block;
         position: absolute;
-        left: 24px;
         top: 50%;
-        margin-top: -20px;
+        left: 24px;
+        display: inline-block;
         width: 2px;
         height: 40px;
+        margin-top: -20px;
         background-color: #6190e8;
-        box-shadow: 0 7px 12px 0 rgb(97 144 232 / 20%);
         border-radius: 1px;
+        content: '';
+        box-shadow: 0 7px 12px 0 rgb(97 144 232 / 20%);
       }
     }
 

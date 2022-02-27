@@ -7,5 +7,12 @@
   "trailingComma": "none",
   "bracketSpacing": true,
   "jsxBracketSameLine": false,
-  "arrowParens": "avoid"
+  "arrowParens": "avoid",
+  "quoteProps": "as-needed",
+  "insertPragma": false,
+  "requirePragma": false,
+  "proseWrap": "never",
+  "htmlWhitespaceSensitivity": "strict",
+  "endOfLine": "auto",
+  "printWidth": 120
 }

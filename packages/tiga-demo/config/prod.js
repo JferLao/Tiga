@@ -15,6 +15,6 @@ module.exports = {
     }
   },
   h5: {
-    publicPath: './',
+    publicPath: './'
   }
 }

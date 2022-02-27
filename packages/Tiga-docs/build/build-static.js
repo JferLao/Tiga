@@ -8,10 +8,7 @@ spinner.start()
 
 fs.emptyDirSync(path.resolve(__dirname, '../dist/h5'))
 
-fs.copy(
-  path.resolve(__dirname, '../../tiga-demo/dist'),
-  path.resolve(__dirname, '../dist')
-)
+fs.copy(path.resolve(__dirname, '../../tiga-demo/dist'), path.resolve(__dirname, '../dist'))
   .then(() => {
     spinner.stop()
   })

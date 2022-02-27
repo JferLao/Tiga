@@ -8,7 +8,7 @@ const options = {
   className: 'wrap'
 }
 
-let md = require('markdown-it')({
+const md = require('markdown-it')({
   html: true, // 在源码中启用 HTML 标签
   xhtmlOut: true, // 使用 '/' 来闭合单标签 （比如 <br />）。
   typographer: false, //启用一些语言中立的替换 + 引号美化
@@ -41,10 +41,7 @@ let md = require('markdown-it')({
         }
       }
       // 把代码中的{}转
-      highlightContent = highlightContent.replace(
-        /[{}]/g,
-        match => `{'${match}'}`
-      )
+      highlightContent = highlightContent.replace(/[{}]/g, match => `{'${match}'}`)
 
       // 加上 hljs
       highlightContent = highlightContent
@@ -68,10 +65,7 @@ module.exports = source => {
   this.cacheable
   const _options = getOptions(this) || {}
 
-  Object.assign(
-    options,
-    _options.markdownItReact ? _options.markdownItReact() : {}
-  )
+  Object.assign(options, _options.markdownItReact ? _options.markdownItReact() : {})
 
   // md转换
   const { body } = frontMatter(source)
@@ -122,10 +116,10 @@ module.exports = source => {
     .replace(/<hr>/g, '<hr />')
     .replace(/<br>/g, '<br />')
     .replace(/class=/g, 'className=')
-    .replace(/style=/g,'styles=')
+    .replace(/style=/g, 'styles=')
 
   const js = moduleJS.join('\n')
   const jsx = content
-  
+
   return template({ imports, js, jsx, state, options })
 }

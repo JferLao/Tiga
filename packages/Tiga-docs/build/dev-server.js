@@ -37,7 +37,6 @@ server.listen(port, host, err => {
 
 let isFirstCompile = true
 
-
 compiler.hooks.invalid.tap('InvalidHook', filepath => {
   console.log(chalk.grey(`[${formatTime()}]修改路径: ${filepath}`))
   spinner.text = '项目运行中...🚀 ~'

@@ -3,12 +3,10 @@ const webpack = require('webpack')
 const webpackMerge = require('webpack-merge')
 const rimraf = require('rimraf')
 
-const Mocha = require('mocha');
+const Mocha = require('mocha')
 const mocha = new Mocha({
-    timeout: '10000ms'
-});
-
-
+  timeout: '10000ms'
+})
 
 const webpackProdConfig = require('../build/webpack.prod.config')
 const webpackBaseConfig = require('../build/webpack.base.config')

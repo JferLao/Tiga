@@ -1,5 +1,5 @@
 import { View } from '@tarojs/components'
-import Taro, { Component } from '@tarojs/taro'
+import { Component } from '@tarojs/taro'
 import PropTypes, { InferProps } from 'prop-types'
 import React from 'react'
 

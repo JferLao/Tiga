@@ -13,11 +13,7 @@ const config = {
   babel: {
     sourceMap: true,
     presets: ['env'],
-    plugins: [
-      'transform-class-properties',
-      'transform-decorators-legacy',
-      'transform-object-rest-spread'
-    ]
+    plugins: ['transform-class-properties', 'transform-decorators-legacy', 'transform-object-rest-spread']
   },
   framework: 'react',
   defineConstants: {},
