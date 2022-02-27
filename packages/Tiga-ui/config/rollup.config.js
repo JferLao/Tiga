@@ -5,7 +5,7 @@ import RollupCommonjs from '@rollup/plugin-commonjs'
 import RollupTypescript from 'rollup-plugin-typescript2'
 import RollupCopy from 'rollup-plugin-copy'
 import RullupAlias from 'rollup-plugin-alias'
-import NodePath, { resolve } from 'path'
+import NodePath from 'path'
 
 const resolveFile = path => NodePath.resolve(__dirname, '..', path)
 const externalPackages = [

@@ -12,9 +12,7 @@ export default class TiButtonGroup extends React.Component<TiButtonGroupProps> {
     const { buttoSlot, hasPadding, className } = this.props
     const padddingCls = hasPadding ? 'ti-button-group--space' : null
     return (
-      <View className={classNames('ti-button-group', padddingCls, className)}>
-        {buttoSlot}
-      </View>
+      <View className={classNames('ti-button-group', padddingCls, className)}>{buttoSlot}</View>
     )
   }
 }

@@ -14,13 +14,18 @@
     ]
   },
   "scripts": {
-    "start":"lerna run --scope tiga-docs start",
+    "start": "lerna run --scope tiga-docs start",
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
     "build:component": "lerna run --scope tiga-ui build",
+    "test": "lerna run --scope tiga-ui test",
     "clean": "lerna run clean",
     "clean:component": "lerna run --scope tiga-ui clean",
-    "publish": "lerna publish from-git --yes"
+    "publish": "lerna publish from-git --yes",
+    "commitmsg": "validate-commit-msg",
+    "commit": "git-cz ",
+    "lint": "eslint  packages/  --ext .js --ext .ts --ext .tsx",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
@@ -39,17 +44,19 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^3.0.0",
-    "husky": "^4.3.8",
+    "husky": "^7.0.4",
     "lerna": "^4.0.0",
-    "lint-staged": "^11.2.6",
+    "lint-staged": "^12.3.4",
     "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
     "standard": "^16.0.4",
-    "stylelint": "^13.3.0",
-    "stylelint-config-standard": "^20.0.0",
+    "stylelint": "^14.5.3",
+    "stylelint-config-standard": "^25.0.0",
     "stylelint-scss": "^3.16.0"
   },
   "dependencies": {
+    "commitlint": "^16.2.1",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-import": "^2.25.2",
@@ -58,23 +65,14 @@
     "lodash": "^4.17.20",
     "lodash-es": "^4.17.20",
     "node-sass": "4.14.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-order": "^5.0.0",
     "ts-jest": "^27.0.7",
     "typescript": "^3.9.7"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
     }
-  },
-  "lint-staged": {
-    "**/*.{ts,tsx,js,jsx}": [
-      "prettier --write",
-      "eslint --fix",
-      "git add"
-    ],
-    "**/*.{css,scss}": [
-      "stylelint --fix"
-    ]
   }
 }

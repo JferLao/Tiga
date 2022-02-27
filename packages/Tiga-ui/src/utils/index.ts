@@ -1,4 +1,3 @@
-
 function pxTransform(size: number): string {
   if (!size) return ''
   const designWidth = 750
@@ -10,6 +9,4 @@ function pxTransform(size: number): string {
   return `${size / deviceRatio[designWidth]}rpx`
 }
 
-export {
-  pxTransform
-}
+export { pxTransform }

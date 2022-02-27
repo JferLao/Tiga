@@ -32,7 +32,7 @@
     "build": "yarn run build:rollup && yarn run build:lib",
     "build:lib": "tsc --project ./tsconfig.build.json",
     "build:rollup": "rollup --config ./config/rollup.config.js",
-    "test": "jest --config .jest.js --cache=false",
+    "test": "jest --coverage --config .jest.js --cache=false",
     "clean": "rimraf .temp dist lib coverage",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "prepublishOnly": "yarn run clean && yarn run build"

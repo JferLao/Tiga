@@ -1,7 +1,7 @@
 {
   "overrides": [
     {
-      "include": "packages/tiga-docs/**",
+      "include": "packages/**",
       "presets": [
         [
           "@babel/preset-env",

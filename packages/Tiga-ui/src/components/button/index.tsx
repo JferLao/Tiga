@@ -2,13 +2,7 @@ import PropTypes, { InferProps } from 'prop-types'
 import React, { Component } from 'react'
 import Taro from '@tarojs/taro'
 import { TiButtonProps, TiButtonState } from '../../../types/button'
-import {
-  BaseEventOrig,
-  Button,
-  CommonEvent,
-  Form,
-  View
-} from '@tarojs/components'
+import { BaseEventOrig, Button, CommonEvent, Form, View } from '@tarojs/components'
 import { ButtonProps } from '@tarojs/components/types/Button'
 import classNames from 'classnames'
 import TiLoading from '../loading'
@@ -46,9 +40,7 @@ class TiButton extends Component<TiButtonProps, TiButtonState> {
     this.props?.onGetUserInfo?.(event)
   }
 
-  private onContact = (
-    event: BaseEventOrig<ButtonProps.onContactEventDetail>
-  ): void => {
+  private onContact = (event: BaseEventOrig<ButtonProps.onContactEventDetail>): void => {
     this.props?.onContact?.(event)
   }
 
@@ -136,11 +128,7 @@ class TiButton extends Component<TiButtonProps, TiButtonState> {
     }
 
     const webButton = (
-      <Button
-        className='ti-button__wxbutton'
-        lang={lang}
-        formType={formType}
-      ></Button>
+      <Button className='ti-button__wxbutton' lang={lang} formType={formType}></Button>
     )
 
     const button = (

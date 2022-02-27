@@ -21,7 +21,7 @@ $color-text-white-4: lighten(#fff, 60%) !default;
 
 /* Background-color */
 $background-color-base: #f0f2fb !default;
-$background-color-text: #ffffff !default;
+$background-color-text: #fff !default;
 
 /* Split-color */
 $split-color-base: #e6e6e6 !default;
@@ -34,9 +34,6 @@ $button-color-click: lighten($color-theme-1, 15%) !default;
 $button-text-color-click: lighten($color-text-white-1, 15%) !default;
 $button-color-disabled: lighten($color-theme-1, 30%) !default;
 $button-text-color-disabled: $color-text-white-4 !default;
-
-
-
 
 /*  Components   */
 
