@@ -3,7 +3,7 @@ import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 import React from 'react'
 import '@tailwindcss/postcss7-compat/tailwind.css'
 
-
+import 'at-ui-style'
 import Docs from './pages/docs.jsx'
 import './assets/style/normalize.scss'
 import './assets/style/index.scss'

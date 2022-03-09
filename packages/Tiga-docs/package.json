@@ -48,7 +48,7 @@
     "copy-to-clipboard": "^3.3.1",
     "core-js": "3",
     "glob-all": "^3.2.1",
-    "highlight.js": "^9.18.1",
+    "highlight.js": "10.0.0",
     "mocha": "^6.1.4",
     "qrcode.react": "^1.0.0",
     "react": "^16.13.1",
@@ -59,6 +59,7 @@
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
+    "at-ui-style": "^1.5.1",
     "@babel/core": "^7.9.0",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
