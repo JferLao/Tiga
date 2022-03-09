@@ -6,7 +6,7 @@ import classnames from 'classnames'
 import './style.scss'
 
 class Sidebar extends React.Component {
-  constructor (...args) {
+  constructor(...args) {
     super(...args)
 
     this.state = {
@@ -14,9 +14,9 @@ class Sidebar extends React.Component {
     }
   }
 
-  toggleMenu (idx) {
+  toggleMenu(idx) {
     this.setState(function (state) {
-      let { currentOpenMenu } = state
+      const { currentOpenMenu } = state
 
       if (currentOpenMenu.includes(idx)) {
         currentOpenMenu.splice(currentOpenMenu.indexOf(idx), 1)
@@ -30,18 +30,18 @@ class Sidebar extends React.Component {
     })
   }
 
-  render () {
+  render() {
     const { data: items } = this.props
 
     return (
       <nav className='ti-nav'>
-        {items.map((item) => {
+        {items.map(item => {
           return (
             <div key={item.name}>
               <h2 className='ti-nav__title'>{item.title}</h2>
               <ul className='ti-nav__items'>
                 {item.items &&
-                  item.items.map((navItem) => {
+                  item.items.map(navItem => {
                     return (
                       <li className='ti-nav__item' key={navItem.name}>
                         <NavLink
@@ -64,21 +64,17 @@ class Sidebar extends React.Component {
                       <li className='ti-nav__item active' key={group.title}>
                         <a className='ti-nav__group' onClick={this.toggleMenu.bind(this, idx)}>
                           {group.title}
-                          <i className={classnames('icon', {
-                            'icon-chevron-down': !this.state.currentOpenMenu.includes(
-                              idx
-                            ),
-                            'icon-chevron-up': this.state.currentOpenMenu.includes(
-                              idx
-                            )
-                          })}/>
+                          <i
+                            className={classnames('icon', {
+                              'icon-chevron-down': !this.state.currentOpenMenu.includes(idx),
+                              'icon-chevron-up': this.state.currentOpenMenu.includes(idx)
+                            })}
+                          />
                         </a>
-                        <CollapseTransition
-                          isShow={!this.state.currentOpenMenu.includes(idx)}
-                        >
+                        <CollapseTransition isShow={!this.state.currentOpenMenu.includes(idx)}>
                           <ul className='ti-nav__child-items'>
                             {' '}
-                            {group.items.map((navItem) => {
+                            {group.items.map(navItem => {
                               return (
                                 <li className='ti-nav__child-item' key={navItem.name}>
                                   <NavLink
