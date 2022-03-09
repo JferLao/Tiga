@@ -1,8 +1,8 @@
 import * as Nerv from 'nervjs'
-import { Route, Redirect, Switch, browserHistory } from 'react-router-dom'
-
+import { Route, Redirect, Switch } from 'react-router-dom'
+import React from 'react'
 import navsConfig from '../nav.config.yml'
-import { default as pathMap } from '../page-route'
+// import { default as pathMap } from '../page-route'
 import '../assets/style/docs.scss'
 
 class Docs extends Nerv.Component {
@@ -12,15 +12,18 @@ class Docs extends Nerv.Component {
 
   render() {
     const data = navsConfig['components']
+    console.log(data)
     return (
       <div className='app' id='app'>
         <Switch>
           {data.map(item => {
             if (item.items) {
               return item.items.map(item => {
+                console.log(`/docs/${item.name.toLowerCase()}`)
                 return (
                   <Route
                     path={`/docs/${item.name.toLowerCase()}`}
+                    key={`/docs/${item.name.toLowerCase()}`}
                     component={require(`../view/${item.name}`).default}
                   />
                 )
@@ -29,9 +32,11 @@ class Docs extends Nerv.Component {
             if (item.groups) {
               return item.groups.map(item => {
                 return item.items.map(item => {
+                  console.log(`/docs/${item.name.toLowerCase()}`)
                   return (
                     <Route
                       path={`/docs/${item.name.toLowerCase()}`}
+                      key={`/docs/${item.name.toLowerCase()}`}
                       component={require(`../view/${item.name}`).default}
                     />
                   )
